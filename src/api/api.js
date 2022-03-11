@@ -2,9 +2,9 @@ import axios from "./axios";
 
 const token = 'Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7'
 
-const getFilm = async () => {
+const getFilm = async (theater) => {
   try {
-    const { status, data } = await axios.get("/cinemaworld/movies", {
+    const { status, data } = await axios.get(`/${theater}world/movies`, {
       headers: {
         'x-api-key' : token
       }
@@ -18,5 +18,6 @@ const getFilm = async () => {
     return error.response.data;
   }
 };
+
 
 export default { getFilm };

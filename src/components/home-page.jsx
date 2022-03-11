@@ -5,15 +5,20 @@ import api from "../api/api"
 
 const Home = () => {
 
+    
     useEffect( () => {
-        async function fetchData() {
-            const data = await api.getFilm()
-            if (data){
-                console.log("Data:", data)
+        const arr = ['cinema', 'film']
+        arr.forEach(theater => {
+            async function fetchCinema() {
+                const data = await api.getFilm(theater)
+                if (data){
+                    console.log(`Data ${theater}World: `, data)
+                }
             }
-        }
-        fetchData()
+            fetchCinema()
+        })
     }, [])
+
 
     return (
         <h1>Home Page - CRA</h1>
