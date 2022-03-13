@@ -47,13 +47,6 @@ const Home = () => {
             </div>
           );
         })}
-      {/* <div>
-          <h3>{filmWorld.Movies[1].Actors}</h3>
-          <img
-            src={filmWorld.Movies[1].Poster}
-            alt={filmWorld.Movies[1].Title}
-          />
-        </div> */}
     </>
   );
 };
